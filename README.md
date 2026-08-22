@@ -24,7 +24,7 @@ gh repo list | Select-String SubnetCalc
 # CD
 cd D:\Github\workspace.jre8
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\SubnetCalc)){rmdir .\SubnetCalc}
+if (Test-Path -Path .\SubnetCalc){rm -Recurse -Force .\SubnetCalc}
 # クローン実行
 git clone https://github.com/hide104y/SubnetCalc.git
 ```
@@ -165,7 +165,7 @@ git push -u origin java08
 # CD
 cd D:\Github\workspace.jre8
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\SubnetCalc)){rmdir .\SubnetCalc}
+if (Test-Path -Path .\SubnetCalc){rm -Recurse -Force .\SubnetCalc}
 # クローン実行
 git clone -b java08 https://github.com/hide104y/SubnetCalc.git
 ```
