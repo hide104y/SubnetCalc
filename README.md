@@ -79,12 +79,16 @@ mvn -version
 
 ## MAVENプロジェクトの作成
 ```shell
+# CD
+cd ${base_dir}\${solution}
+# 作成
 mvn archetype:generate `
 -DarchetypeArtifactId=maven-archetype-quickstart `
 -DinteractiveMode=false `
--DgroupId=${groupid} `
--DartifactId=${solution}
+-DgroupId="${groupid}" `
+-DartifactId="${solution}"
 ```
+
 ## 手動配置が必要な依存ライブラリーソースの配置
 - src\main\java\org\apache\commons\net\util\SubnetUtils.java
 
